@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Student Registration Form </title>
+        <style>
+        body {
+        background-image:url("/static/university.jpg");
+        backgorund-size:cover;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        height=100%;
+         }
+        </style>
+    </head>
+    <body>
+         <h1> Student Registration Form</h1>
+         <form method="POST"action='/'>
+          <p>
+          Roll Number: <input type="text" name="rno" required>
+         </p>
+         <p>
+         Name: <input type="text" name="name" required>
+         </p>
+         <p>
+         Email: <input type="text" name="email" required>
+         </p>
+         <p>
+         Mobile: <input type="text" name="mobile" required>
+         </p>
+          <p>
+          Branch: <input type="text" name="branch" required>
+          </p>
+          <p>
+          Address: <input type="text" name="addr" required>
+          </p>
+          <p>
+          Role: <input type="text" value="role">
+          </p>
+           <p>
+           Password: <input type="text" name="pwd">
+           </p>
+           <p>
+           Submit: <input type="submit" value="submit">
+            </p>
+          </form>
+          
+          <!--Display the form detials below the submit button-->
+          {% if submitted %}
+          <h2> Student Registration Details: </h2>
+          <p> Roll Number: {{rno}} </p>
+          <p> Name: {{name}} </p>
+          <p> Email: {{email}} </p>
+          <p> Mobile:{{mobile}} </p>
+          <p> Branch: {{branch}} </p>
+          <p> Address: {{addr}} </p>
+          <p> Role: {{role}} </p>
+          <p> Password: {{pwd}} </p>
+          {% endif %}
+   </body>
+</html>
+        
